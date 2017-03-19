@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SoftUnicon Valley</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<style>
+    @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+    @import url("https://fonts.google.com/?query=ocr+a+extended");
+
+    html {
+        box-sizing: border-box;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: "OCR A Extended", sans-serif;
+        margin: 0 auto;
+        padding: 0;
+        width: 80%;
+    }
+
+    header img {
+        width: 100%;
+        height: 460px;
+    }
+
+    .container-navigation {
+        display: block;
+        background: rgba(233, 231, 238, 1);
+        top: 0;
+        right: 0;
+        left: 0;
+        position: relative;
+        bottom: -16px;
+        text-align: center;
+        padding: 10px;
+        padding-left: 0;
+        padding-right: 0;
+        width: 271px;
+        margin: auto;
+        border-radius: 10px;
+        margin-top: -25px;
+    }
+
+    .container-navigation-center {
+        display: block;
+        background: rgba(233, 231, 238, 1);
+        text-align: center;
+        padding: 30px;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+        margin: auto;
+        margin-top: -5px;
+        font-size: 20px;
+    }
+
+    .container-navigation a {
+        font-family: "OCR A Extended", sans-serif;
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+    }
+
+    .container-navigation a:hover {
+        background: #003161;
+        text-shadow: 2px 1px 3px black;
+        color: white;
+        border-radius: 10px;
+    }
+
+    .container-navigation-center a {
+        font-family: "OCR A Extended", sans-serif;
+        text-decoration: none;
+        color: black;
+    }
+
+    .container-navigation-center a:hover {
+        background: #003161;
+        text-shadow: 2px 1px 3px black;
+        color: white;
+        border-radius: 10px;
+    }
+    /*-----ZA TABLET:----*/
+    @media screen and (max-width: 1024px) {
+        .container {
+            padding: 20px;
+            padding-bottom: 0;
+        }
+
+        li.page-scroll {
+            padding-right: 20px;
+        }
+
+        section#contact div.contact-forms{
+            padding: 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+
+    @media screen and (min-width: 600px) {
+        .container-navigation-center {
+            display: none;
+        }
+
+    }
+
+    /*-----ZA TELEFON:----*/
+    @media screen and (max-width: 640px) {
+        .container-navigation {
+            display: none;
+        }
+
+        header img {
+            width: 100%;
+            height: 439px;
+        }
+        section#contact div.contact-forms{
+            padding: 0;
+        }
+    }
+
+    .hidden {
+        display: none !important;
+    }
+
+    /*
+    #mainNav::before, .container::before, .navbar-header::before {
+        content: '';
+        display: table;
+    }*/
+    h2 {
+        font-family: "OCR A Extended", sans-serif;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .gallery li {
+        display: inline-block;
+        padding: 35px;
+    }
+
+    .gallery ul {
+        margin: 0 auto;
+        width: 91%;
+        padding: 10px;
+    }
+
+    li.odd {
+        background: rgba(35, 76, 138, 0.27);
+        margin: 10px;
+    }
+
+    li.even {
+        background: rgba(227, 151, 14, 0.27);
+        margin: 10px;
+    }
+    li.open-book{
+        margin-left: 20%;
+    }
+    div.info {
+        margin-top: 15px;
+        background: #003161;
+        padding: 30px;
+        padding-bottom: 132px;
+        box-shadow: 1px 1px 3px 1px black;
+    }
+
+    .info p {
+        text-shadow: 2px 1px 3px black;
+        color: white;
+        text-align: justify;
+        font-size: 30px;
+    }
+
+    .info p:first-letter {
+        font-size: 40px;
+    }
+
+    .info img {
+        float: right;
+        margin: 0 0 10px 10px;
+        border: 33px solid rgba(248, 227, 189, 0.85);
+    }
+
+    .contact-forms {
+        background: rgba(227, 151, 14, 0.27);
+        text-align: center;
+        padding: 10px;
+        margin-top: 15px;
+        position: relative;
+    }
+    form {
+        margin: 30px;
+        text-align: -webkit-right;
+        font-size: 23px;
+    }
+
+    form img {
+        float: right;
+        margin: 0 0 10px 10px;
+    }
+
+    .form-control {
+        padding: 7px;
+        padding-left: 28px;
+        font-size: 17px;
+        margin: 7px;
+    }
+
+    button {
+        margin-right: 33%;
+        padding: 10px 40px 10px 40px;
+        outline: none;
+        background: #003161;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        text-shadow: 2px 2px black;
+    }
+
+    button:hover {
+        cursor: pointer;
+    }
+
+    .fa {
+        color: #003161;
+        position: absolute;
+        padding-top: 13px;
+        padding-left: 11px;
+    }
+
+    footer {
+        background: rgba(233, 231, 238, 1);
+    }
+
+    footer {
+        padding: 4% 0px;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    footer .location_softuni {
+        display: inline;
+        font-size: 30px;
+    }
+
+    .location_softuni a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    .fa-graduation-cap {
+        color: #003161;
+        position: relative;
+        font-size: 30px;
+    }
+
+    .social li, .social a {
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        font-size: 30px;
+    }
+
+    .fa-facebook-square:hover, .fa-youtube-play:hover, .fa-google-plus-square:hover, .fa-instagram:hover, .fa-graduation-cap:hover {
+        color: #EDAB1F;
+    }
+
+    a.button-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 7px;
+        left: 70%;
+        text-align: right;
+        padding: 14px 16px;
+    }
+    .button-to-top img{
+        width: 25%;
+        height: 60%;
+    }
+</style>
+<body id="page-top" class="index">
+<div class="site-container">
+    <!-- Header -->
+    <header>
+            <img src="softunicon-header.jpg" height="311" width="778"/>
+        <div class="container-navigation">
+            <a href="#portfolio">Funny pictures</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </header>
+    <div class="container-navigation-center">
+        <a href="#portfolio">Funny pictures</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <!-- Gallery Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="header-portfolio">
+                <h2>Fun photos and memes</h2>
+                <hr class="star-primary">
+            </div>
+            <div class="gallery">
+                <ul>
+                    <li class="odd">
+                        <img src="what-iam-doing.jpg" width="233" height="216"/></li>
+                    <li class="even">
+                        <img src="back-end-vs-fron-end.png" width="233" height="216"/></li>
+                    <li class="odd">
+                        <img src="nakov-meme-beer.jpg" height="216" width="233"/></li>
+                    <li class="even">
+                        <img src="html-tatoo.png" height="216" width="233"/></li>
+                    <li class="odd">
+                        <img src="delphin.jpg" width="233" height="216"/></li>
+                    <li class="even">
+                        <img src="do-it-with-style.jpg" width="233" height="216"/></li>
+                    <li class="odd">
+                        <img src="dont-want-to-lose.jpg" width="233" height="216"/></li>
+                    <li class="even">
+                        <img src="h1-city.jpg" width="233" height="216"/></li>
+                    <li class="odd">
+                        <img src="html-vs-htmlcss.jpg" width="233" height="216"/></li>
+                    <li class="even">
+                        <img src="need-graphic-designer.png" width="233" height="216"/></li>
+                    <li class="odd">
+                        <img src="new-final.jpg" width="233" height="216"/></li>
+                    <li class="even">
+                        <img src="should-i-remove.jpg" width="233" height="216"/></li>
+                    <li class="odd"><img src="titanic-float.jpg" height="216" width="233"/></li>
+                    <li class="even">
+                        <img src="web-pages-meme.jpg" width="233" height="216"/></li>
+                    <li class="odd">
+                        <img src="css.gif" height="216" width="233"/></li>
+                    <li class="even">
+                        <img src="css-to-my-html.jpg" height="216" width="233"/></li>
+                    <li class="odd">
+                        <img src="go-outside.jpg" height="216" width="233"/></li>
+                    <li class="even">
+                        <img src="imagine-when.jpg" height="216" width="233"/></li>
+                    <li class="odd">
+                        <img src="I-take-mine.jpg" height="216" width="233"/></li>
+                    <li class="even">
+                        <img src="sometimes-i-just-need.jpg" height="216" width="233"/></li>
+                    <li class="odd">
+                        <img src="test-your-site.jpg" height="216" width="233"/></li>
+                    <li class="open-book">
+                        <img src="open-book.png" height="337" width="500"/></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="header-about">
+                <h2>About</h2>
+                <hr class="star-primary">
+            </div>
+            <div class="info">
+                <p><img src="free-tools.png" height="216" width="233"/>
+                    We are students from Software University aka our mini Silicon Valley.
+                    We created funny site about it.Also about this how difficult,
+                    annoying (sometimes) and interesting (always) is to be web development.
+                    Enjoy!</p>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="header-contact">
+                <h2>Contact </h2>
+                <hr class="star-primary">
+            </div>
+            <div class="contact-forms">
+                <form><img src="website-designer.gif" height="216" width="233"/>
+                    <div class="contact-form-name">
+                        <label>Name</label>
+                        <i class="fa fa-user-circle" aria-hidden="true"></i>
+                        <input type="text" class="form-control" placeholder="Name" required
+                               data-validation-required-message="Please enter your name.">
+                    </div>
+                    <div class="contact-form-email">
+                        <label>Email Address
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i></label>
+                        <input type="email" class="form-control" placeholder="Email Address" required
+                               data-validation-required-message="Please enter your email address.">
+                    </div>
+                    <div class="contact-form-phone">
+                        <label>Phone Number
+                            <i class="fa fa-phone" aria-hidden="true"></i></label>
+                        <input type="tel" class="form-control" placeholder="Phone Number" required
+                               data-validation-required-message="Please enter your phone number.">
+                    </div>
+                    <div class="contact-form-message">
+                        <label>Message
+                            <i class="fa fa-comments-o" aria-hidden="true"></i></label>
+                        <textarea rows="5" class="form-control" placeholder="Message" required
+                                  data-validation-required-message="Please enter a message."></textarea>
+                    </div>
+                    <br>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="location_softuni">
+            <a href="https://softuni.bg/"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
+            <a href="https://softuni.bg/">Software University</a>
+        </div>
+        <div class="social">
+            <ul>
+                <li class="facebook"><a href="https://www.facebook.com/SoftwareUniversity">
+                    <i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                <li class="google-plus"><a href="https://plus.google.com/+SoftuniBg">
+                    <i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
+                <li class="youtube"><a href="https://www.youtube.com/user/softwareuniversity">
+                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a></li>
+                <li class="instagram"><a href="https://www.instagram.com/softuni.bg/">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- Span Slider -->
+    <a href="#" id="scrollToTop" class="button-to-top" style="display: block">
+        <img src="knikbo.png"/>
+    </a>
+    <script>
+        $(document).ready(function () {
+            var offset = 220;
+            var duration = 500;
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > offset) {
+                    $('#scrollToTop').fadeIn(duration);
+                } else {
+                    $('#scrollToTop').fadeOut(duration);
+                }
+            });
+
+            $('#scrollToTop').click(function (event) {
+                event.preventDefault();
+                $('html, body').animate({ scrollTop: 0 }, 800);
+                return false;
+            });
+        });
+    </script>
+</div>
+</body>
+</html>
